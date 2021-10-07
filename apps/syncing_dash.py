@@ -10,8 +10,12 @@ def app():
 
     #st.set_page_config(layout="wide")
     st.title("State Syncing")
-
-
+    st.text ("https://app.flipsidecrypto.com/velocity/queries/eb1689f5-7b75-49d1-ba9e-e1f4eab489c9")
+    st.text("")
+    st.text("Syncing table is composed of values from polygon.udm_events where origin_address = '0x0000000000000000000000000000000000000000'")
+    st.text("")
+    st.text("sum(amount_usd) as syncying_sum")
+    st.text("avg(amount_usd) as syncying_avg, etc")
 
     sync_flipside_df = pd.read_json('https://api.flipsidecrypto.com/api/v2/queries/eb1689f5-7b75-49d1-ba9e-e1f4eab489c9/data/latest')
 
@@ -122,7 +126,7 @@ def app():
         x = "SYNC_DAY",
         y = columns,
         color = "SYMBOL",
-        title = "<b>DIY / Choose your own adventure</b>",
+        title = "<b>DIY / Choose your own adventure - Sync</b>",
         orientation = "v",
         template = "plotly_white",
         width = 1000,

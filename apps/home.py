@@ -61,7 +61,7 @@ def app():
     st.text("")
     st.caption ("""
     Most sidebars are for diy visualizations. 
-    Choose which columns to display on the graph as well as changing between log or linear scale. Each plot will automatically be of a different color.
+    Choose which columns from the corresponding table to display on the graph as well as the y-axis scale. Each plot will automatically be of a different color.
     """)
     st.text("")
    
