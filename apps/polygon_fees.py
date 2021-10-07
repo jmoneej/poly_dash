@@ -8,11 +8,11 @@ import json
 def app():
 
     #st.set_page_config(layout="wide")
-    st.title("Eth Fees")
+    st.title("Polygon Fees")
 
 
 
-    eth_fees_flipside_df = pd.read_json('https://api.flipsidecrypto.com/api/v2/queries/11edbedf-d84e-493d-b605-827298e317e2/data/latest')
+    poly_fees_flipside_df = pd.read_json('https://api.flipsidecrypto.com/api/v2/queries/5b112bae-b1e2-446c-b458-1eb31900d06e/data/latest')
 
     t_f = False
     st.sidebar.write("Choose y-axis scale")
@@ -24,10 +24,10 @@ def app():
 #-------------------------------------------------------
     
     st.markdown("""
-    ### Ethereum Fees and Transactions - Base Table
+    ### Polygon Fees and Transactions - Base Table
     """)
 
-    st.dataframe(eth_fees_flipside_df)
+    st.dataframe(poly_fees_flipside_df)
 
     st.markdown("""
     """)
@@ -36,14 +36,14 @@ def app():
     st.sidebar.header("Choose Columns:")
     columns = st.sidebar.multiselect(
         "Select the columns to plot",
-        options = eth_fees_flipside_df.columns,
-        default = eth_fees_flipside_df.columns.max()
+        options = poly_fees_flipside_df.columns,
+        default = poly_fees_flipside_df.columns.max()
     )
 
 
-    eth_fees_graph = px.line(
-        eth_fees_flipside_df, #this is the dataframe you are trying to plot
-        x = "ETH_DAY",
+    polygon_fees_graph = px.line(
+        poly_fees_flipside_df, #this is the dataframe you are trying to plot
+        x = "POLYGON_DAY",
         y = columns,
         #color = columns,
         title = "<b>Syncing Sum By Date</b>",
@@ -55,8 +55,9 @@ def app():
     )
     
 
-    st.plotly_chart(eth_fees_graph)
+    st.plotly_chart(polygon_fees_graph)
 
+    
  
 
     # ------------------------------------------------
