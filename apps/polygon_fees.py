@@ -9,6 +9,7 @@ def app():
 
     #st.set_page_config(layout="wide")
     st.title("Polygon Fees")
+    st.text ("https://app.flipsidecrypto.com/velocity/queries/5b112bae-b1e2-446c-b458-1eb31900d06e")
 
 
 
@@ -46,7 +47,7 @@ def app():
         x = "POLYGON_DAY",
         y = columns,
         #color = columns,
-        title = "<b>Syncing Sum By Date</b>",
+        title = "<b>DIY / Choose your own adventure - Polygon Fees</b>",
         orientation = "v",
         template = "plotly_white",
         width = 1000,

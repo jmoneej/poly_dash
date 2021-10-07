@@ -9,6 +9,8 @@ def app():
 
     #st.set_page_config(layout="wide")
     st.title("Eth - Matic Vol")
+    st.text ("https://app.flipsidecrypto.com/velocity/queries/5a7ac116-7647-44ce-a421-1316b0974b28")
+
 
 
 
@@ -46,7 +48,7 @@ def app():
         x = "BLOCK_HOUR_ETH",
         y = columns,
         #color = columns,
-        title = "<b>Syncing Sum By Date</b>",
+        title = "<b>DIY / Choose your own adventure - Eth/Matic</b>",
         orientation = "v",
         template = "plotly_white",
         width = 1000,
