@@ -1,7 +1,5 @@
 # poly_dash
 
-# poly_dash
-
 # streadmlitflipsideduo
 
 
