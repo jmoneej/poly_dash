@@ -18,7 +18,7 @@ def app():
     )
 
     st.write ("""
-    NOTE: Queries do not autorefresh, will need to be manually refreshed on Flipside to update data on graphs and tables in this interface.
+    NOTE:   Queries refresh hourly.
     """)
 
     st.text ("")
